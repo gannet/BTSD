@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/sopdev/sopdev/!svn/ver/167/trunk/BTSD/lib
+END
+dbConnect.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sopdev/sopdev/!svn/ver/167/trunk/BTSD/lib/dbConnect.php
+END
+sopDev.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sopdev/sopdev/!svn/ver/167/trunk/BTSD/lib/sopDev.php
+END
+progress.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sopdev/sopdev/!svn/ver/120/trunk/BTSD/lib/progress.php
+END

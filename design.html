@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DESIGN TEMPLATE</title>
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/jquery-ui-1.8.9.custom.min.js"></script>
+<link rel="stylesheet" href="css/overcast/jquery-ui-1.8.9.custom.css">
+<style>
+#workflow {
+	width: 50em;
+	margin: 0 auto
+}
+</style>
+<script>
+$(function() {
+// we can shut off tabs we know the user cannot visit before sending the page
+	$('#workflow').tabs({disabled:[1,2,3,4,5],ajaxOptions: {
+				error: function( xhr, status, index, anchor ) {
+					$( anchor.hash ).html(
+						"Couldn't load this tab. We'll try to fix this as soon as possible. " +
+						"If this wouldn't be a demo." );
+				}
+			}});
+	$('#workflow').tabs({
+    load: function(event, ui) {
+        $('a', ui.panel).click(function() {
+            $(ui.panel).load(this.href);
+            return false;
+        });
+    }0
+	});
+});
+</script>
+
+</head>
+<body>
+	<div id="workflow" class="ui-tabs">
+		<ul>
+			<!-- we can send the current page's content when sending the page.
+	     after all, no need to have two page requests for one page -->
+			<li><a href="#type">Type</a></li>
+			<li><a href="requirements.php">Requirements</a></li>
+			<li><a href="actions.php">Actions</a></li>
+			<li><a href="construct.php">Construct</a></li>
+			<li><a href="review.php">Review</a></li>
+			<li><a href="finalize.php">Finalize</a></li>
+		</ul>
+		<div id="type">Wee</div>
+	</div>
+</body>
+</html>

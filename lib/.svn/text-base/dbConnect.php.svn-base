@@ -1,0 +1,30 @@
+<?php
+
+//Creating dbConnect class
+class dbConnect
+{
+    //private $host = 'bmisop.chmccorp.cchmc.org';
+    //private $user = 'bmisop';
+    //private $pass = 'RQ7cF5iOq6g3';
+    //private $db;
+    //private $db_name = 'BTSD';
+    
+    private $host = 'localhost';
+    private $user = 'mike';
+    private $pass = 'password';
+    private $db;
+    private $db_name = 'BTSD';
+	
+    public function connect()
+    {
+		//Connect to application database
+		$this->db = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
+        if ($this->db->connect_error)
+            die($this->db->connect_error);
+		return $this->db;
+	}
+	
+	
+	
+}
+?>
